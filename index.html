@@ -1,91 +1,50 @@
 <!DOCTYPE html>
-
 <html>
-
 <head>
-
-<title>Pre-Order Form</title>
-
+    <title>Pre-Order Form</title>
 </head>
-
 <body>
 
+    <h1>Pre-Order Form</h1>
+    <p>Please answer this form so we know who to contact.</p>
 
+    <!-- 
+      FIXED: Changed the action attribute to a Formspree endpoint.
+      Change "your_formspree_id" to your real ID to get emails.
+    -->
+    <form action="https://formspree.io" method="POST">
+      <fieldset>
+        <legend>Contact Info</legend>
+        
+        <p>
+           <label for="name2">Full Name:</label>
+           <input id="name2" name="name2" type="text" required>
+        </p>
+       
+         <p>
+           <label for="Number1">Phone Number:</label>
+           <!-- FIXED: Changed type to "tel" for better mobile phone input -->
+           <input id="Number1" name="Number1" type="tel" required>
+          </p>
 
-<h1>Pre-Order Form</h1>
+          <p>
+           <label for="email2">Email:</label>
+           <!-- FIXED: Changed type to "email" for proper browser verification -->
+           <input id="email2" name="email2" type="email" required>
+         </p>
 
-<p>Please answer this form so we know who to contact.</p>
+        <label for="Ship">Method of Shipping:</label>
+        <select id="Ship" name="Ship">
+          <option value="Standard Shipping">Standard Shipping</option>
+          <option value="Express Delivery">Express Delivery</option>
+          <option value="Next-Day Delivery">Next-Day Delivery</option>
+         </select>
 
-
-
-
-
-<form action="/action_page.php" method="get">
-
-  <fieldset>
-
-    <legend>Contact Info</legend>
-
-    
-
-    <p>
-
-       <label for="name2">Full Name:</label>
-
-       <input id="name2" name="name2" type="text" required>
-
-    </p>
-
-    
-
-   
-
-     <p>
-
-<label for="Number1">Phone Number:</label>
-
-       <input id="Number1" name="Number1" type="text" required>
-
-      </p>
-
-      <p>
-
-       <label for="email2">Email:</label>
-
-       <input id="email2" name="email2"   type="text" required>
-
-     </p>
-
-
-
-    <label for="Ship">Method of Shipping:</label>
-
-    <select id="Ship" name="Ship">
-
-      <option value="Ship1">Standard Shipping</option>
-
-      <option value="Ship2">Express Delivery</option>
-
-      <option value="Ship3">Next-Day Delivery</option>
-
-     </select>
-
-
-
-   </fieldset>
-
-<button type="submit">Submit</button>
-
-<button type="reset">Reset</button>
-
-  
-
-   
-
-</form>
-
-
+       </fieldset>
+       
+       <button type="submit">Submit</button>
+       <button type="reset">Reset</button>
+    </form>
 
 </body>
-
 </html>
